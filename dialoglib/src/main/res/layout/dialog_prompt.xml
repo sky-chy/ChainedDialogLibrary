@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_cricle"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:textColor="@color/colorGray"
+        android:gravity="center" />
+
+    <View
+        android:id="@+id/dividing"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorLightGray" />
+
+    <TextView
+        android:id="@+id/btn"
+        android:textSize="15sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="8dp" />
+</LinearLayout>

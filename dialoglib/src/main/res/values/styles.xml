@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--dialog-->
+    <style name="BaseDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:textColor">#000000</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="windowActionBar">false</item>
+        <!--背景颜色及和透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowNoTitle">true</item>
+        <!--是否去除边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 点击空白部分activity消失 -->
+        <!--<item name="android:windowCloseOnTouchOutside">true</item>-->
+    </style>
+
+    <!--透明度动画-->
+    <style name="anim_alpha">
+        <item name="android:windowEnterAnimation">@anim/anim_alpha_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_alpha_exit</item>
+    </style>
+    <!--缩放动画-->
+    <style name="anim_scale">
+        <item name="android:windowEnterAnimation">@anim/anim_scale_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_scale_exit</item>
+    </style>
+    <!--旋转动画-->
+    <style name="anim_rotate">
+        <item name="android:windowEnterAnimation">@anim/anim_rotate_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_rotate_exit</item>
+    </style>
+
+
+    <!--左进左出动画-->
+    <style name="anim_left_to_left">
+        <item name="android:windowEnterAnimation">@anim/anim_translate_left_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_translate_left_exit</item>
+    </style>
+    <!--左进上出动画-->
+    <style name="anim_left_to_top">
+        <item name="android:windowEnterAnimation">@anim/anim_translate_left_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_translate_top_exit</item>
+    </style>
+    <!--左进右出动画-->
+    <style name="anim_left_to_right">
+        <item name="android:windowEnterAnimation">@anim/anim_translate_left_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_translate_right_exit</item>
+    </style>
+    <!--左进下出动画-->
+    <style name="anim_left_to_bottom">
+        <item name="android:windowEnterAnimation">@anim/anim_translate_left_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_translate_bottom_exit</item>
+    </style>
+
+
+    <!--右进右出动画-->
+    <style name="anim_right_to_right">
+        <item name="android:windowEnterAnimation">@anim/anim_translate_right_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_translate_right_exit</item>
+    </style>
+    <!--右进下出动画-->
+    <style name="anim_right_to_bottom">
+        <item name="android:windowEnterAnimation">@anim/anim_translate_right_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_translate_bottom_exit</item>
+    </style>
+    <!--右进左出动画-->
+    <style name="anim_right_to_left">
+        <item name="android:windowEnterAnimation">@anim/anim_translate_right_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_translate_left_exit</item>
+    </style>
+    <!--右进上出动画-->
+    <style name="anim_right_to_top">
+        <item name="android:windowEnterAnimation">@anim/anim_translate_right_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_translate_top_exit</item>
+    </style>
+
+
+    <!--上进上出动画-->
+    <style name="anim_top_to_top">
+        <item name="android:windowEnterAnimation">@anim/anim_translate_top_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_translate_top_exit</item>
+    </style>
+    <!--上进右出动画-->
+    <style name="anim_top_to_right">
+        <item name="android:windowEnterAnimation">@anim/anim_translate_top_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_translate_right_exit</item>
+    </style>
+    <!--上进下出动画-->
+    <style name="anim_top_to_bottom">
+        <item name="android:windowEnterAnimation">@anim/anim_translate_top_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_translate_bottom_exit</item>
+    </style>
+    <!--上进左出动画-->
+    <style name="anim_top_to_left">
+        <item name="android:windowEnterAnimation">@anim/anim_translate_top_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_translate_left_exit</item>
+    </style>
+
+
+    <!--下进下出动画-->
+    <style name="anim_bottom_to_bottom">
+        <item name="android:windowEnterAnimation">@anim/anim_translate_bottom_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_translate_bottom_exit</item>
+    </style>
+    <!--下进左出动画-->
+    <style name="anim_bottom_to_left">
+        <item name="android:windowEnterAnimation">@anim/anim_translate_bottom_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_translate_left_exit</item>
+    </style>
+    <!--下进上出动画-->
+    <style name="anim_bottom_to_top">
+        <item name="android:windowEnterAnimation">@anim/anim_translate_bottom_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_translate_top_exit</item>
+    </style>
+    <!--下进右出动画-->
+    <style name="anim_bottom_to_right">
+        <item name="android:windowEnterAnimation">@anim/anim_translate_bottom_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_translate_right_exit</item>
+    </style>
+</resources>
