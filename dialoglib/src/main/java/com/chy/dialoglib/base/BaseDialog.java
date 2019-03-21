@@ -116,7 +116,7 @@ public abstract class BaseDialog extends DialogFragment {
      * @param showBottom false或true
      * @return 对话框本体
      */
-    public BaseDialog setShowBottom(boolean showBottom) {
+    public BaseDialog setShowOnBottom(boolean showBottom) {
         mShowBottomEnable = showBottom;
         return this;
     }
@@ -128,7 +128,7 @@ public abstract class BaseDialog extends DialogFragment {
      * @param height 窗体高度
      * @return 对话框本体
      */
-    public BaseDialog setSize(int width, int height) {
+    public BaseDialog setDialogSize(int width, int height) {
         mWidth = width;
         mHeight = height;
         return this;
@@ -140,7 +140,7 @@ public abstract class BaseDialog extends DialogFragment {
      * @param margin 窗体边距
      * @return 对话框本体
      */
-    public BaseDialog setMargin(int margin) {
+    public BaseDialog setBothSidesMargin(int margin) {
         mMargin = margin;
         return this;
     }

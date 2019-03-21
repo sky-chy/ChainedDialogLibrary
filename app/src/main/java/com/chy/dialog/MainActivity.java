@@ -103,9 +103,9 @@ public class MainActivity extends AppCompatActivity {
                                 }
                             }
                         })
-                        .setShowBottom(true)
+                        .setShowOnBottom(true)
                         .setDialogAnim(DialogAnim.ANIM_BOTTOM_TO_BOTTOM)
-                        .setMargin(10)
+                        .setBothSidesMargin(10)
                         .show(getSupportFragmentManager());
                 break;
             //网格对话框;
@@ -133,8 +133,8 @@ public class MainActivity extends AppCompatActivity {
                                 toast("长按了第" + pageTag + "页第" + (onPagePosition + 1) + "个菜单：" + beans.get(onDataPosition).text);
                             }
                         })
-                        .setMargin(0)
-                        .setShowBottom(true)
+                        .setBothSidesMargin(0)
+                        .setShowOnBottom(true)
                         .show(getSupportFragmentManager());
                 break;
             case R.id.progress_dialog:
