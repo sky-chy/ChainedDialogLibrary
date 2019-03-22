@@ -1,5 +1,5 @@
 # ChainedDialogLibrary
-链式对话框库，支持自定义动画
+链式对话框库，支持自定义动画，本库共集成提示对话框(PromptDialog)，文本对话框(TextDialog)，item对话框(ItemDialog)，grid对话框(GridDialog)，加载对话框(LoadingDialog).高度自定义化，内置的样式不满意，可以自由修改，
 
 ## 使用方法
 
@@ -78,7 +78,7 @@ PromptDialog.newInstance()
 |setContentTextSize(float contentTextSize)|设置对话框内容文字大小|浮点值|-|
 |setContentTextGravity(int contentGravity)|设置对话框内容文字的对齐方式|Gravity值|Gravity.CENTER|
 |setBackgroundColor(@ColorInt int backgroundColor) |设置对话框背景颜色|Color值|-|
-|setBackground(Drawable backgroundDrawable)|设置对话框背景|Drawable值|-|
+|setBackground(Drawable backgroundDrawable)|设置对话框背景|drawable型的背景图片|-|
 |setBackgroundRes(@DrawableRes int backgroundDrawableResource)|设置对话框背景图|Resource中的id值|-|
 |setCancelButtonText(String cancelText)|设置取消按钮文字|字符串|取消|
 |setCancelButtonTextColor(@ColorInt int cancelButtonTextColor)|设置取消按钮文字颜色|Color值|Color.RED|
@@ -134,10 +134,10 @@ TextDialog.newInstance()
 |setCancelButtonTextColor(@ColorInt int cancelButtonTextColor)|设置取消按钮文字颜色|Color值|Color.RED|
 |setCancelButtonTextFontSize(float cancelButtonTextFontSize)|设置取消按钮文字大小|浮点值|15sp|
 |setMenuBackgroundColor(@ColorInt int menuBackgroundColor)|设置菜单区的背景颜色|Color值|-|
-|setMenuBackground(Drawable menuBackgroundDrawable)|设置菜单区的背景|Drawable值|-|
+|setMenuBackground(Drawable menuBackgroundDrawable)|设置菜单区的背景|drawable型的背景图片|-|
 |setMenuBackgroundRes(@DrawableRes int menuBackgroundDrawableResource)|设置菜单区的背景图|Resource中的id值|-|
 |setCancelButtonBackgroundColor(@ColorInt int cancelButtonBackgroundColor)|设置取消按钮的背景颜色|Color值|-|
-|setCancelButtonBackground(Drawable cancelButtonBackgroundDrawable)|设置取消按钮的背景|Drawable值|-|
+|setCancelButtonBackground(Drawable cancelButtonBackgroundDrawable)|设置取消按钮的背景|drawable型的背景图片|-|
 |setCancelButtonBackgroundRes(@DrawableRes int cancelButtonBackgroundDrawableResource)|设置取消按钮的背景图|Resource中的id值|-|
 |setOnMenuItemClickListener(OnDialogItemClickListener itemClickListener)|设置item的点击事件|监听OnDialogItemClickListener<br>返回onDialogItemClick(View view, int position, BaseDialog dialog)|-|
 |setOnMenuItemLongClickListener(OnDialogItemLongClickListener itemLongClickListener)|设置item的长按事件|监听OnDialogItemLongClickListener<br>返回onDialogItemLongClick(View view, int position, BaseDialog dialog)|-|  
@@ -186,6 +186,21 @@ ItemDialog.newInstance()
 <img src="/preview/grid_dialog.gif" alt="网格对话框预览图" width="360" height="640">
 
 ### 方法使用
+|方法|作用|参数/用法|默认值|  
+|:----|:------:|:-:|:-:|
+|setMenuDatas(List<GridDialogBean> menuDatas)|设置数据源|数据集|-|
+|setMenuDatas(int[] icons, String[] texts)|设置数据源|分离数组|-|
+|setMenuTextColor(@ColorInt int menusTextColor)|设置菜单文字颜色|Color值|#6b6b6b|
+|setMenuTextFontSize(float menusTextFontSize)|设置菜单文字大小|浮点值|-|
+|setIndicatorShow(boolean showIndication)|设置是否显示指示器|true为显示，false反之|true|
+|setIndicatorNotSelectStatus(@DrawableRes int indicatorNotSelect)|设置未选择状态的指示器|Resource中的id值|-|
+|setIndicatorSelectStatus(@DrawableRes int indicatorSelect)|设置已选择状态的指示器|Resource中的id值|-|
+|setShowGridCountOnPage(int showGridCount)|设置每页显示的菜单数|整数，上限为16，建议设置为4的倍数|8|
+|setBackgroundColor(@ColorInt int backgroundColor)|设置背景颜色|Color值|#eaeaea|
+|setBackground(Drawable backgroundDrawable)|设置对话框背景|drawable型的背景图片|-|
+|setBackgroundRes(@DrawableRes int backgroundDrawableResource)|设置对话框背景图|Resource中的id值|-|
+|setOnDialogGridClickListener(OnDialogGridClickListener gridClickListener)|设置grid的点击事件|监听OnDialogGridClickListener<br>返回onDialogGridClick(View view, int pageTag, int onDataPosition, int onPagePosition, BaseDialog dialog)<br>pageTag代表在第几页，onDataPosition代表在你数据集中的位置，onPagePosition代表在该页的第几个位置|-|
+|setOnDialogGridLongClickListener(OnDialogGridLongClickListener gridLongClickListener)|设置grid的长按事件|监听OnDialogGridLongClickListener<br>返回onDialogGridLongClick(View view, int pageTag, int onDataPosition, int onPagePosition, BaseDialog dialog)<br>pageTag代表在第几页，onDataPosition代表在你数据集中的位置，onPagePosition代表在该页的第几个位置|-|
 
 ### 简单用法
 ```java
@@ -222,6 +237,13 @@ GridDialog.newInstance()
 <img src="/preview/loading_dialog.gif" alt="加载对话框预览图" width="360" height="640">
 
 ### 方法使用
+|方法|作用|参数/用法|默认值|  
+|:----|:------:|:-:|:-:|
+|setLoadingType(LoadingType type)|设置加载对话框的类型| CYLINDER,<br>DISC,<br>STRIPE,<br>COLUMNAR|LoadingType.CYLINDER|
+|setCustomizeLoadingColor(@DrawableRes int loadingImageID, @ColorInt int backgroundColor)|设置自定义背景和图案的等待对话框|loadingImageID为加载图案在Resource中的id值，backgroundColor为背景颜色|-|
+|setCustomizeLoadingResource(@DrawableRes int loadingImageID, @DrawableRes int backgroundRes)|设置自定义背景和图案的等待对话框|loadingImageID为加载图案在Resource中的id值，backgroundRes背景图片为Resource中的id值|-|
+|setCustomizeLoadingDrawable(@DrawableRes int loadingImageID, Drawable backgroundDrawable)|设置自定义背景和图案的等待对话框|loadingImageID为加载图案在Resource中的id值，backgroundDrawable为drawable型的背景图片|-|
+
 
 ### 简单用法
 ```java
