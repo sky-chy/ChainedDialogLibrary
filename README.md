@@ -42,7 +42,7 @@ dependencies {
 |setBackgroundColor(@ColorInt int backgroundColor)|设置对话框背景颜色|Color值|-|
 |setBackground(Drawable backgroundDrawable)|设置对话框背景|Drawable值|-|
 |setBackgroundRes(@DrawableRes int backgroundDrawableResource)|设置对话框背景图|Resource中的id值|-|
-|setDividingColor(@ColorInt int dividingColor)|设置水平分割线的颜色|Color值|-|
+|setDividingColor(@ColorInt int dividingColor)|设置水平分割线的颜色|Color值|#6b6b6b|
 |setDividingShow(boolean dividingShow)|设置是否显示水平分割线|true为显示，false反之|true|
 |setOnDialogClickListener(OnDialogClickListener listener)|设置按钮的监听器|监听OnDialogClickListener<br>返回onDialogClick(View view, BaseDialog dialog)|-|
 
