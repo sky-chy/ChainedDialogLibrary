@@ -23,7 +23,39 @@ dependencies {
 |setCustomizeAnim(@StyleRes int animStyle)|设置自定义动画的方法|R.style.xxx<br>xxx为你定义在styles文件中的“android:windowEnterAnimation”<br>和“android:windowExitAnimation”动画|R.style.anim_scale|
 
 ## 提示对话框
+### 预览图
+
 <img src="/preview/prompt_dialog.gif" alt="提示对话框预览图" width="360" height="640">
+
+|方法|作用|参数/用法|默认值|  
+|:----|:------:|:-:|:-:|
+|setButtonText(String btnText)|设置按钮文字|字符串|-|
+|setButtonTextColor(@ColorInt int btnTextColor)|设置按钮文字颜色|Color值|-|
+|setButtonTextFontSize(float btnTextSize)|设置按钮文字大小|浮点值|-|
+|setContentText(String contentText)|设置内容文字|字符串|-|
+|setContentTextColor(@ColorInt int contentTextColor)|设置内容文字颜色|字符串|-|
+|setContentTextFontSize(float contentTextSize)|设置内容文字大小|浮点值|-|
+|setBackgroundColor(@ColorInt int backgroundColor)|设置对话框背景颜色|Color值|-|
+|setBackground(Drawable backgroundDrawable)|设置对话框背景|Drawable值|-|
+|setBackgroundRes(@DrawableRes int backgroundDrawableResource)|设置对话框背景图|Resource中的id值|-|
+|setDividingColor(@ColorInt int dividingColor)|设置水平分割线的颜色|Color值|-|
+|setDividingShow(boolean dividingShow)|设置是否显示水平分割线|true为显示，false反之|true|
+|setOnDialogClickListener(OnDialogClickListener listener)|设置按钮的监听器|监听OnDialogClickListener<br>返回onDialogClick(View view, BaseDialog dialog)|-|
+
+### 简单用法
+```java
+PromptDialog.newInstance()
+    .setButtonText("好的")
+    .setButtonTextColor(Color.BLUE)
+    .setContentText("测试通知")
+    .setOnDialogClickListener(new OnDialogClickListener() {
+        @Override
+        public void onDialogClick(View view, BaseDialog dialog) {
+            dialog.dismiss();
+            }
+        })
+    .show(getSupportFragmentManager());
+```
 
 ## 文本对话框
 <img src="/preview/text_dialog.gif" alt="文本对话框预览图" width="360" height="640">
