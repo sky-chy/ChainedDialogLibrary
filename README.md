@@ -140,7 +140,7 @@ TextDialog.newInstance()
 |setCancelButtonBackground(Drawable drawable)|设置取消按钮的背景|drawable型的背景图片|-|
 |setCancelButtonBackgroundRes(@DrawableRes int resource)|设置取消按钮的背景图|Resource中的id值|-|
 |setOnMenuItemClickListener<br>(OnDialogItemClickListener listener)|设置item的点击事件|监听OnDialogItemClickListener<br>返回onDialogItemClick(View view, int position, BaseDialog dialog)|-|
-|setOnMenuItemLongClickListener<brOnDialogItemLongClickListener listener)|设置item的长按事件|监听OnDialogItemLongClickListener<br>返回onDialogItemLongClick(View view, int position, BaseDialog dialog)|-|  
+|setOnMenuItemLongClickListener<br>OnDialogItemLongClickListener listener)|设置item的长按事件|监听OnDialogItemLongClickListener<br>返回onDialogItemLongClick(View view, int position, BaseDialog dialog)|-|  
     
 ### 简单用法
 ```java
