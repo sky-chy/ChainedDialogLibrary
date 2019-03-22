@@ -10,7 +10,7 @@ dependencies {
 }
 ```
 
-### 通用的方法
+### 所有对话框的通用方法
 
 |方法|作用|参数/用法|默认值|  
 |:----|:------:|:-:|:-:|
@@ -23,13 +23,17 @@ dependencies {
 |setCustomizeAnim(@StyleRes int animStyle)|设置自定义动画的方法|R.style.xxx<br>xxx为你定义在styles文件中的“android:windowEnterAnimation”<br>和“android:windowExitAnimation”动画|R.style.anim_scale|
 
 ## 提示对话框
-<img src="/preview/prompt_dialog.png" alt="提示对话框预览图" width="360" height="640">
+<img src="/preview/prompt_dialog.gif" alt="提示对话框预览图" width="360" height="640">
 
 ## 文本对话框
-<img src="/preview/text_dialog.png" alt="文本对话框预览图" width="360" height="640">
+<img src="/preview/text_dialog.gif" alt="文本对话框预览图" width="360" height="640">
 
 ## 条目对话框
-<img src="/preview/item_dialog.png" alt="条目对话框预览图" width="360" height="640">
+<img src="/preview/item_dialog.gif" alt="条目对话框预览图" width="360" height="640">
 
 ## 网格对话框
-<img src="/preview/grid_dialog.png" alt="网格对话框预览图" width="360" height="640">
+<img src="/preview/grid_dialog.gif" alt="网格对话框预览图" width="360" height="640">
+
+## 加载对话框
+<img src="/preview/loading_dialog.gif" alt="加载对话框预览图" width="360" height="640">
+
