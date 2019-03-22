@@ -37,7 +37,7 @@ dependencies {
 |setButtonTextColor(@ColorInt int btnTextColor)|设置按钮文字颜色|Color值|-|
 |setButtonTextFontSize(float btnTextSize)|设置按钮文字大小|浮点值|15sp|
 |setContentText(String contentText)|设置内容文字|字符串|-|
-|setContentTextColor(@ColorInt int contentTextColor)|设置内容文字颜色|字符串|-|
+|setContentTextColor(@ColorInt int contentTextColor)|设置内容文字颜色|字符串|#dadada|
 |setContentTextFontSize(float contentTextSize)|设置内容文字大小|浮点值|-|
 |setBackgroundColor(@ColorInt int backgroundColor)|设置对话框背景颜色|Color值|-|
 |setBackground(Drawable backgroundDrawable)|设置对话框背景|Drawable值|-|
@@ -49,16 +49,16 @@ dependencies {
 ### 简单用法
 ```java
 PromptDialog.newInstance()
-    .setButtonText("好的")
-    .setButtonTextColor(Color.BLUE)
-    .setContentText("测试通知")
-    .setOnDialogClickListener(new OnDialogClickListener() {
-        @Override
-        public void onDialogClick(View view, BaseDialog dialog) {
-            dialog.dismiss();
+        .setButtonText("好的")
+        .setButtonTextColor(Color.BLUE)
+        .setContentText("测试通知")
+        .setOnDialogClickListener(new OnDialogClickListener() {
+            @Override
+            public void onDialogClick(View view, BaseDialog dialog) {
+                dialog.dismiss();
             }
         })
-    .show(getSupportFragmentManager());
+        .show(getSupportFragmentManager());
 ```
 ----------
 ## 文本对话框
@@ -74,7 +74,7 @@ PromptDialog.newInstance()
 |setTitleTextColor(@ColorInt int titleTextColor)|设置对话框标题文字的颜色|Color值|-|
 |setTitleTextSize(float titleTextSize)|设置对话框标题文字大小|浮点值|-|
 |setContentText(String contentText)|设置对话框内容文字|字符串|-|
-|setContentTextColor(@ColorInt int contentTextColor)|设置对话框内容文字的颜色|Color值|-|
+|setContentTextColor(@ColorInt int contentTextColor)|设置对话框内容文字的颜色|Color值|#dadada|
 |setContentTextSize(float contentTextSize)|设置对话框内容文字大小|浮点值|-|
 |setContentTextGravity(int contentGravity)|设置对话框内容文字的对齐方式|Gravity值|Gravity.CENTER|
 |setBackgroundColor(@ColorInt int backgroundColor) |设置对话框背景颜色|Color值|-|
@@ -97,26 +97,26 @@ PromptDialog.newInstance()
 
 ### 简单用法
 ```java
- TextDialog.newInstance()
-    .setDialogType(TextDialog.DIALOG_TYPE.INFORMATION)
-    .setTitleText("通知信息")
-    .setContentText("Bootstrap 是一套用于 HTML、CSS 和 JS 开发的开源工具集。利用我们提供的 Sass 变量和大量 mixin、响应式栅格系统、可扩展的预制组件、基于 jQuery 的强大的插件系统，能够快速为你的想法开发出原型或者构建整个 app 。")
-    .setContentTextGravity(Gravity.LEFT)
-    .setOnCancelClickListener(new OnDialogClickListener() {
-        @Override
-        public void onDialogClick(View view, BaseDialog dialog) {
-            toast("点击了取消按钮");
-            dialog.dismiss();
-        }
-    })
-    .setOnConfirmClickListener(new OnDialogClickListener() {
-        @Override
-        public void onDialogClick(View view, BaseDialog dialog) {
-            toast("点击了确定按钮");
-            dialog.dismiss();
-        }
-    })
-    .show(getSupportFragmentManager());
+TextDialog.newInstance()
+        .setDialogType(TextDialog.DIALOG_TYPE.INFORMATION)
+        .setTitleText("通知信息")
+        .setContentText("Bootstrap 是一套用于 HTML、CSS 和 JS 开发的开源工具集。利用我们提供的 Sass 变量和大量 mixin、响应式栅格系统、可扩展的预制组件、基于 jQuery 的强大的插件系统，能够快速为你的想法开发出原型或者构建整个 app 。")
+        .setContentTextGravity(Gravity.LEFT)
+        .setOnCancelClickListener(new OnDialogClickListener() {
+            @Override
+            public void onDialogClick(View view, BaseDialog dialog) {
+                toast("点击了取消按钮");
+                dialog.dismiss();
+            }
+        })
+        .setOnConfirmClickListener(new OnDialogClickListener() {
+            @Override
+            public void onDialogClick(View view, BaseDialog dialog) {
+                toast("点击了确定按钮");
+                dialog.dismiss();
+            }
+        })
+        .show(getSupportFragmentManager());
 ```
 ----------
 ## 条目对话框
@@ -124,8 +124,62 @@ PromptDialog.newInstance()
 <img src="/preview/item_dialog.gif" alt="条目对话框预览图" width="360" height="640">
 
 ### 方法使用
-
+|方法|作用|参数/用法|默认值|  
+|:----|:------:|:-:|:-:|
+|setMenuDatas(String[] stringDatas)|设置菜单的数据源|字符数组|-|
+|setMenuDatas(ArrayList<String> listDatas)|设置菜单的数据源|数据集|-|
+|setMenuTextColor(@ColorInt int menusTextColor)|设置菜单文字颜色|Color值|#dadada|
+|setMenuTextFontSize(float menusTextFontSize)|设置菜单文字大小|浮点值|-|
+|setCancelButtonText(String cancelButtonText)|设置取消按钮文字|字符串|取消|
+|setCancelButtonTextColor(@ColorInt int cancelButtonTextColor)|设置取消按钮文字颜色|Color值|Color.RED|
+|setCancelButtonTextFontSize(float cancelButtonTextFontSize)|设置取消按钮文字大小|浮点值|15sp|
+|setMenuBackgroundColor(@ColorInt int menuBackgroundColor)|设置菜单区的背景颜色|Color值|-|
+|setMenuBackground(Drawable menuBackgroundDrawable)|设置菜单区的背景|Drawable值|-|
+|setMenuBackgroundRes(@DrawableRes int menuBackgroundDrawableResource)|设置菜单区的背景图|Resource中的id值|-|
+|setCancelButtonBackgroundColor(@ColorInt int cancelButtonBackgroundColor)|设置取消按钮的背景颜色|Color值|-|
+|setCancelButtonBackground(Drawable cancelButtonBackgroundDrawable)|设置取消按钮的背景|Drawable值|-|
+|setCancelButtonBackgroundRes(@DrawableRes int cancelButtonBackgroundDrawableResource)|设置取消按钮的背景图|Resource中的id值|-|
+|setOnMenuItemClickListener(OnDialogItemClickListener itemClickListener)|设置item的点击事件|监听OnDialogItemClickListener<br>返回onDialogItemClick(View view, int position, BaseDialog dialog)|-|
+|setOnMenuItemLongClickListener(OnDialogItemLongClickListener itemLongClickListener)|设置item的长按事件|监听OnDialogItemLongClickListener<br>返回onDialogItemLongClick(View view, int position, BaseDialog dialog)|-|  
+    
 ### 简单用法
+```java
+ItemDialog.newInstance()
+        .setMenuDatas(new String[]{"菜单1", "菜单2", "菜单3", "菜单4", "菜单5", "菜单6", "菜单7", "菜单8", "菜单9", "菜单10"})
+        .setOnMenuItemClickListener(new OnDialogItemClickListener() {
+            @Override
+            public void onDialogItemClick(View view, int position, BaseDialog dialog) {
+                switch (position) {
+                    case -1:
+                        toast("点击了取消按钮");
+                        break;
+                    default:
+                        toast("点击了菜单" + (position + 1));
+                        break;
+                }
+                dialog.dismiss();
+
+            }
+        })
+        .setOnMenuItemLongClickListener(new OnDialogItemLongClickListener() {
+            @Override
+            public void onDialogItemLongClick(View view, int position, BaseDialog dialog) {
+                switch (position) {
+                    case -1:
+                        toast("长按了取消按钮");
+                        break;
+                    default:
+                        toast("长按了菜单" + (position + 1));
+                        break;
+                }
+            }
+        })
+        .setShowOnBottom(true)
+        .setDialogAnim(DialogAnim.ANIM_BOTTOM_TO_BOTTOM)
+        .setBothSidesMargin(10)
+        .show(getSupportFragmentManager());
+```
+
 ----------
 ## 网格对话框
 ### 预览图
@@ -134,6 +188,34 @@ PromptDialog.newInstance()
 ### 方法使用
 
 ### 简单用法
+```java
+final List<GridDialogBean> beans = new ArrayList<>();
+GridDialogBean bean;
+for (int i = 0; i < 100; i++) {
+    bean = new GridDialogBean();
+    bean.text = "测试菜单" + i;
+    bean.icon = R.mipmap.ic_launcher;
+    beans.add(bean);
+}
+GridDialog.newInstance()
+        .setMenuDatas(beans)
+        .setOnDialogGridClickListener(new OnDialogGridClickListener() {
+            @Override
+            public void onDialogGridClick(View view, int pageTag, int onDataPosition, int onPagePosition, BaseDialog dialog) {
+                dialog.dismiss();
+                toast("点击了第" + pageTag + "页第" + (onPagePosition + 1) + "个菜单：" + beans.get(onDataPosition).text);
+            }
+        })
+        .setOnDialogGridLongClickListener(new OnDialogGridLongClickListener() {
+            @Override
+            public void onDialogGridLongClick(View view, int pageTag, int onDataPosition, int onPagePosition, BaseDialog dialog) {
+                toast("长按了第" + pageTag + "页第" + (onPagePosition + 1) + "个菜单：" + beans.get(onDataPosition).text);
+            }
+        })
+        .setBothSidesMargin(0)
+        .setShowOnBottom(true)
+        .show(getSupportFragmentManager());
+```
 ----------
 ## 加载对话框
 ### 预览图
@@ -142,3 +224,7 @@ PromptDialog.newInstance()
 ### 方法使用
 
 ### 简单用法
+```java
+LoadingDialog.newInstance()
+        .show(getSupportFragmentManager());
+```
