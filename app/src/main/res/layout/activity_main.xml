@@ -40,6 +40,13 @@
             android:text="GRID对话框" />
 
         <Button
+            android:id="@+id/loading_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="click"
+            android:text="等待对话框" />
+
+        <Button
             android:id="@+id/progress_dialog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

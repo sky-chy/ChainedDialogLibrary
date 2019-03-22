@@ -3,7 +3,7 @@
     android:id="@+id/lay"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/bg_cricle"
+    android:background="@drawable/bg_circle"
     android:orientation="vertical">
 
     <TextView

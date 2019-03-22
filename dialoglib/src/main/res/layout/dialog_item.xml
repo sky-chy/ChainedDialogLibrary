@@ -11,7 +11,7 @@
         android:id="@+id/menus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg_cricle"
+        android:background="@drawable/bg_circle"
         app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
 
     <TextView
@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:background="@drawable/bg_cricle"
+        android:background="@drawable/bg_circle"
         android:gravity="center"
         android:padding="10dp"
         android:text="取消"

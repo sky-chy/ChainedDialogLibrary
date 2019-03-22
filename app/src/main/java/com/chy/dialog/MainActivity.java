@@ -11,6 +11,7 @@ import com.chy.dialoglib.base.BaseDialog;
 import com.chy.dialoglib.base.DialogAnim;
 import com.chy.dialoglib.bean.GridDialogBean;
 import com.chy.dialoglib.dialog.ItemDialog;
+import com.chy.dialoglib.dialog.LoadingDialog;
 import com.chy.dialoglib.dialog.ProgressDialog;
 import com.chy.dialoglib.dialog.PromptDialog;
 import com.chy.dialoglib.dialog.TextDialog;
@@ -139,6 +140,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.progress_dialog:
                 ProgressDialog.newInstance()
+                        .show(getSupportFragmentManager());
+                break;
+            case R.id.loading_dialog:
+                LoadingDialog.newInstance()
                         .show(getSupportFragmentManager());
                 break;
         }
