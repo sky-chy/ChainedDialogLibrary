@@ -40,7 +40,7 @@ publish {
     userOrg = 'chyhongye'//bintray.com你的用户名
     groupId = 'com.chy.chydialoglib'//jcenter上的路径
     artifactId = 'chydialoglib'//项目名称
-    publishVersion = '1.1.0'//版本号
-    desc = 'dialogLib'//描述，不重要
+    publishVersion = '1.1.1'//版本号
+    desc = '增加可以设置自定义动画的通用方法setCustomizeAnim(@StyleRes int animStyle)'//描述，不重要
     website = 'https://github.com/chyhongye/Dialog'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
 }

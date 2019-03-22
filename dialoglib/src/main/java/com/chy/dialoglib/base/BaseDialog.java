@@ -3,9 +3,11 @@ package com.chy.dialoglib.base;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.AnimRes;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.annotation.StyleRes;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentManager;
 import android.view.Gravity;
@@ -176,6 +178,16 @@ public abstract class BaseDialog extends DialogFragment {
     @SuppressLint("NewApi")
     public BaseDialog setDialogAnim(DialogAnim dialogAnim) {
         this.anim = dialogAnim.getDialogType();
+        return this;
+    }
+
+    /**
+     * 设置自定义的Anim动画
+     * @param animStyle 动画
+     * @return 对话框本体
+     */
+    public BaseDialog setCustomizeAnim(@StyleRes int animStyle) {
+        this.anim = animStyle;
         return this;
     }
 
