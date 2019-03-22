@@ -11,7 +11,7 @@ dependencies {
     ...
 }
 ```
-
+----------
 ### 所有对话框的通用方法
 
     注意：不管使用哪种对话框，要专用方法和通用方法混用的，都需要先使用专用方法，否则无法正常混用
@@ -25,7 +25,7 @@ dependencies {
 |show(FragmentManager manager)|显示对话框|FragmentManager|-|
 |setDialogAnim(DialogAnim dialogAnim)|设置对话框进出场动画|ANIM_ALPHA,<br>ANIM_SCALE,<br>ANIM_ROTATE,<br>ANIM_LEFT_TO_LEFT,<br>ANIM_LEFT_TO_TOP,<br>ANIM_LEFT_TO_RIGHT,<br>ANIM_LEFT_TO_BOTTOM,<br>ANIM_RIGHT_TO_RIGHT,<br>ANIM_RIGHT_TO_BOTTOM,<br>ANIM_RIGHT_TO_LEFT,<br>ANIM_RIGHT_TO_TOP,<br> ANIM_TOP_TO_TOP,<br>ANIM_TOP_TO_RIGHT,<br>ANIM_TOP_TO_BOTTOM,<br>ANIM_TOP_TO_LEFT,<br>ANIM_BOTTOM_TO_BOTTOM,<br>ANIM_BOTTOM_TO_LEFT,<br>ANIM_BOTTOM_TO_TOP,<br>ANIM_BOTTOM_TO_RIGHT|ANIM_SCALE|
 |setCustomizeAnim(@StyleRes int animStyle)|设置自定义动画的方法|R.style.xxx<br>xxx为你定义在styles文件中的“android:windowEnterAnimation”<br>和“android:windowExitAnimation”动画|R.style.anim_scale|
-
+----------
 ## 提示对话框
 ### 预览图
 <img src="/preview/prompt_dialog.gif" alt="提示对话框预览图" width="360" height="640">
@@ -60,7 +60,7 @@ PromptDialog.newInstance()
         })
     .show(getSupportFragmentManager());
 ```
-
+----------
 ## 文本对话框
 ### 预览图
 <img src="/preview/text_dialog.gif" alt="文本对话框预览图" width="360" height="640">
@@ -95,7 +95,6 @@ PromptDialog.newInstance()
 |setOnCancelClickListener(OnDialogClickListener cancelClickListener)|设置取消按钮的点击事件|监听OnDialogClickListener<br>返回onDialogClick(View view, BaseDialog dialog)|-|
 |setOnConfirmClickListener(OnDialogClickListener confirmClickListener)|设置确认按钮的点击事件|监听OnDialogClickListener<br>返回onDialogClick(View view, BaseDialog dialog)|-|
 
-
 ### 简单用法
 ```java
  TextDialog.newInstance()
@@ -119,6 +118,7 @@ PromptDialog.newInstance()
     })
     .show(getSupportFragmentManager());
 ```
+----------
 ## 条目对话框
 ### 预览图
 <img src="/preview/item_dialog.gif" alt="条目对话框预览图" width="360" height="640">
@@ -126,7 +126,7 @@ PromptDialog.newInstance()
 ### 方法使用
 
 ### 简单用法
-
+----------
 ## 网格对话框
 ### 预览图
 <img src="/preview/grid_dialog.gif" alt="网格对话框预览图" width="360" height="640">
@@ -134,7 +134,7 @@ PromptDialog.newInstance()
 ### 方法使用
 
 ### 简单用法
-
+----------
 ## 加载对话框
 ### 预览图
 <img src="/preview/loading_dialog.gif" alt="加载对话框预览图" width="360" height="640">
