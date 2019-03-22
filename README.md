@@ -1,7 +1,13 @@
 # ChainedDialogLibrary
 链式对话框库，支持自定义动画
+
+添加依赖
 ```gradle
-implementation 'com.chy.chydialoglib:chydialoglib:1.1.1'
+dependencies {
+    ...
+    implementation 'com.chy.chydialoglib:chydialoglib:1.1.1'
+    ...
+}
 ```
 
 ### 通用的方法
