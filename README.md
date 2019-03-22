@@ -1,10 +1,8 @@
 # ChainedDialogLibrary
 链式对话框库，支持自定义动画
+```gradle
+implementation 'com.chy.chydialoglib:chydialoglib:1.1.1'
 ```
-compile 'com.chy.chydialoglib:chydialoglib:1.1.1'
-```
-## 动态预览图
-<img src="/preview/preview.gif" alt="动态预览图" width="360" height="640">
 
 ### 通用的方法
 
