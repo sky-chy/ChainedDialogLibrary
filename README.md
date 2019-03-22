@@ -136,11 +136,11 @@ TextDialog.newInstance()
 |setMenuBackgroundColor(@ColorInt int menuBackgroundColor)|设置菜单区的背景颜色|Color值|-|
 |setMenuBackground(Drawable menuBackgroundDrawable)|设置菜单区的背景|drawable型的背景图片|-|
 |setMenuBackgroundRes(@DrawableRes int menuBackgroundDrawableResource)|设置菜单区的背景图|Resource中的id值|-|
-|setCancelButtonBackgroundColor(@ColorInt int cancelButtonBackgroundColor)|设置取消按钮的背景颜色|Color值|-|
-|setCancelButtonBackground(Drawable cancelButtonBackgroundDrawable)|设置取消按钮的背景|drawable型的背景图片|-|
-|setCancelButtonBackgroundRes(@DrawableRes int cancelButtonBackgroundDrawableResource)|设置取消按钮的背景图|Resource中的id值|-|
-|setOnMenuItemClickListener(OnDialogItemClickListener itemClickListener)|设置item的点击事件|监听OnDialogItemClickListener<br>返回onDialogItemClick(View view, int position, BaseDialog dialog)|-|
-|setOnMenuItemLongClickListener(OnDialogItemLongClickListener itemLongClickListener)|设置item的长按事件|监听OnDialogItemLongClickListener<br>返回onDialogItemLongClick(View view, int position, BaseDialog dialog)|-|  
+|setCancelButtonBackgroundColor(@ColorInt int color)|设置取消按钮的背景颜色|Color值|-|
+|setCancelButtonBackground(Drawable drawable)|设置取消按钮的背景|drawable型的背景图片|-|
+|setCancelButtonBackgroundRes(@DrawableRes int resource)|设置取消按钮的背景图|Resource中的id值|-|
+|setOnMenuItemClickListener<br>(OnDialogItemClickListener listener)|设置item的点击事件|监听OnDialogItemClickListener<br>返回onDialogItemClick(View view, int position, BaseDialog dialog)|-|
+|setOnMenuItemLongClickListener<brOnDialogItemLongClickListener listener)|设置item的长按事件|监听OnDialogItemLongClickListener<br>返回onDialogItemLongClick(View view, int position, BaseDialog dialog)|-|  
     
 ### 简单用法
 ```java
@@ -196,11 +196,11 @@ ItemDialog.newInstance()
 |setIndicatorNotSelectStatus(@DrawableRes int indicatorNotSelect)|设置未选择状态的指示器|Resource中的id值|-|
 |setIndicatorSelectStatus(@DrawableRes int indicatorSelect)|设置已选择状态的指示器|Resource中的id值|-|
 |setShowGridCountOnPage(int showGridCount)|设置每页显示的菜单数|整数，上限为16，建议设置为4的倍数|8|
-|setBackgroundColor(@ColorInt int backgroundColor)|设置背景颜色|Color值|#eaeaea|
-|setBackground(Drawable backgroundDrawable)|设置对话框背景|drawable型的背景图片|-|
-|setBackgroundRes(@DrawableRes int backgroundDrawableResource)|设置对话框背景图|Resource中的id值|-|
-|setOnDialogGridClickListener(OnDialogGridClickListener gridClickListener)|设置grid的点击事件|监听OnDialogGridClickListener<br>返回onDialogGridClick(View view, int pageTag, int onDataPosition, int onPagePosition, BaseDialog dialog)<br>pageTag代表在第几页，onDataPosition代表在你数据集中的位置，onPagePosition代表在该页的第几个位置|-|
-|setOnDialogGridLongClickListener(OnDialogGridLongClickListener gridLongClickListener)|设置grid的长按事件|监听OnDialogGridLongClickListener<br>返回onDialogGridLongClick(View view, int pageTag, int onDataPosition, int onPagePosition, BaseDialog dialog)<br>pageTag代表在第几页，onDataPosition代表在你数据集中的位置，onPagePosition代表在该页的第几个位置|-|
+|setBackgroundColor(@ColorInt int color)|设置背景颜色|Color值|#eaeaea|
+|setBackground(Drawable drawable)|设置对话框背景|drawable型的背景图片|-|
+|setBackgroundRes(@DrawableRes int resource)|设置对话框背景图|Resource中的id值|-|
+|setOnDialogGridClickListener<br>(OnDialogGridClickListener listener)|设置grid的点击事件|监听OnDialogGridClickListener<br>返回onDialogGridClick(View view, int pageTag, int onDataPosition, int onPagePosition, BaseDialog dialog)<br>pageTag代表在第几页，onDataPosition代表在你数据集中的位置，onPagePosition代表在该页的第几个位置|-|
+|setOnDialogGridLongClickListener<br>(OnDialogGridLongClickListener listener)|设置grid的长按事件|监听OnDialogGridLongClickListener<br>返回onDialogGridLongClick(View view, int pageTag, int onDataPosition, int onPagePosition, BaseDialog dialog)<br>pageTag代表在第几页，onDataPosition代表在你数据集中的位置，onPagePosition代表在该页的第几个位置|-|
 
 ### 简单用法
 ```java
