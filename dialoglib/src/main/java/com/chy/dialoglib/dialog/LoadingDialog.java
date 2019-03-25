@@ -2,6 +2,7 @@ package com.chy.dialoglib.dialog;
 
 import android.annotation.SuppressLint;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.ColorInt;
 import android.support.annotation.DrawableRes;
@@ -64,7 +65,8 @@ public class LoadingDialog extends BaseDialog {
             gif.setImageResource(loadingImageID);
         }
         if (loadingImageID != 0 && backgroundDrawable != null) {
-            lay.setBackground(backgroundDrawable);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+                lay.setBackground(backgroundDrawable);
             gif.setImageResource(loadingImageID);
         }
         if (loadingImageID != 0 && backgroundRes != 0) {
@@ -104,7 +106,7 @@ public class LoadingDialog extends BaseDialog {
     /**
      * 设置自定义背景和图案的等待对话框
      *
-     * @param loadingImageID      自定义图案
+     * @param loadingImageID  自定义图案
      * @param backgroundColor 自定义背景颜色
      * @return 本体
      */
@@ -117,8 +119,8 @@ public class LoadingDialog extends BaseDialog {
     /**
      * 设置自定义背景和图案的等待对话框
      *
-     * @param loadingImageID    自定义图案
-     * @param backgroundRes 自定义背景Drawable
+     * @param loadingImageID 自定义图案
+     * @param backgroundRes  自定义背景Drawable
      * @return 本体
      */
     public LoadingDialog setCustomizeLoadingResource(@DrawableRes int loadingImageID, @DrawableRes int backgroundRes) {
@@ -130,7 +132,7 @@ public class LoadingDialog extends BaseDialog {
     /**
      * 设置自定义背景和图案的等待对话框
      *
-     * @param loadingImageID         自定义图案
+     * @param loadingImageID     自定义图案
      * @param backgroundDrawable 自定义背景图片
      * @return 本体
      */

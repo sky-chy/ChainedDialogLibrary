@@ -4,6 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/bg_circle"
-    android:orientation="vertical">
+    android:orientation="horizontal">
 
+    <!--<com.chy.dialoglib.widget.IndicatorSeekBar-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content" />-->
+
+    <com.chy.dialoglib.widget.MyProgressBar
+        android:id="@+id/pro"
+        android:progress="50"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>

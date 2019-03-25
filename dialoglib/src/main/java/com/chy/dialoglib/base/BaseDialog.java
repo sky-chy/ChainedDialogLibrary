@@ -2,6 +2,7 @@ package com.chy.dialoglib.base;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.AnimRes;
 import android.support.annotation.LayoutRes;
@@ -94,9 +95,16 @@ public abstract class BaseDialog extends DialogFragment {
 
             //设置dialog宽度
             if (mWidth == 0) {
-                params.width = getScreenWidth(Objects.requireNonNull(getContext())) - 2 * dp2px(getContext(), mMargin);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+                    params.width = getScreenWidth(Objects.requireNonNull(getContext())) - 2 * dp2px(getContext(), mMargin);
+                else
+                    params.width = getScreenWidth(getContext()) - 2 * dp2px(getContext(), mMargin);
+
             } else {
-                params.width = dp2px(Objects.requireNonNull(getContext()), mWidth);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+                    params.width = dp2px(Objects.requireNonNull(getContext()), mWidth);
+                else
+                    params.width = dp2px(getContext(), mWidth);
             }
 
             //设置dialog高度
@@ -175,7 +183,6 @@ public abstract class BaseDialog extends DialogFragment {
      * @param dialogAnim 进出动画类型
      * @return 对话框本体
      */
-    @SuppressLint("NewApi")
     public BaseDialog setDialogAnim(DialogAnim dialogAnim) {
         this.anim = dialogAnim.getDialogType();
         return this;
@@ -183,6 +190,7 @@ public abstract class BaseDialog extends DialogFragment {
 
     /**
      * 设置自定义的Anim动画
+     *
      * @param animStyle 动画
      * @return 对话框本体
      */

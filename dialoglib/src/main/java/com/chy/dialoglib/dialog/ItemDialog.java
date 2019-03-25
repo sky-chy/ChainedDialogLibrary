@@ -93,7 +93,10 @@ public class ItemDialog extends BaseDialog {
             adapter = new ItemAdapter(itemDatas, getContext(), menusTextColor, menusTextFontSize);
         }
         menus.setAdapter(adapter);
-        menus.addItemDecoration(new DividerItemDecoration(Objects.requireNonNull(getContext()), DividerItemDecoration.VERTICAL));
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+            menus.addItemDecoration(new DividerItemDecoration(Objects.requireNonNull(getContext()), DividerItemDecoration.VERTICAL));
+        else
+            menus.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
 
     }
 

@@ -2,6 +2,7 @@ package com.chy.dialog;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
@@ -139,8 +140,23 @@ public class MainActivity extends AppCompatActivity {
                         .show(getSupportFragmentManager());
                 break;
             case R.id.progress_dialog:
-                ProgressDialog.newInstance()
-                        .show(getSupportFragmentManager());
+                final ProgressDialog dialog = ProgressDialog.newInstance()
+                        .setDelayMillis(300)
+                        .setMax(100);
+                dialog.show(getSupportFragmentManager());
+                final int[] pro_num = {0};
+                final Handler handler = new Handler();
+                Runnable r = new Runnable() {
+                    @Override
+                    public void run() {
+                        pro_num[0]=pro_num[0]+1;
+                        dialog.setProgress(pro_num[0]);
+                        if (pro_num[0] != 100)
+                            handler.postDelayed(this, 500);
+                    }
+                };
+                handler.postDelayed(r, 500);
+
                 break;
             case R.id.loading_dialog:
                 LoadingDialog.newInstance()

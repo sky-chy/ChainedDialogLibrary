@@ -94,7 +94,10 @@ public class GridDialog extends BaseDialog {
      */
     @SuppressLint("NewApi")
     private void initData() {
-        dialogMenuHeight = (int) (Math.ceil(showGridCount / 4d) * Utils.dp2px(Objects.requireNonNull(getContext()), 100));
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+            dialogMenuHeight = (int) (Math.ceil(showGridCount / 4d) * Utils.dp2px(Objects.requireNonNull(getContext()), 100));
+        else
+            dialogMenuHeight = (int) (Math.ceil(showGridCount / 4d) * Utils.dp2px(getContext(), 100));
 
         //计算总页数
         int page = (int) Math.ceil(menuDatas.size() / (double) showGridCount);
