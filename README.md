@@ -9,7 +9,7 @@
 ```gradle
 dependencies {
     ...
-    implementation 'com.chy.chydialoglib:chydialoglib:1.1.1'
+    implementation 'com.chy.chydialoglib:chydialoglib:1.2.0'
     ...
 }
 ```
