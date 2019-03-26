@@ -10,7 +10,7 @@
 ```gradle
 dependencies {
     ...
-    implementation 'com.chy.chydialoglib:chydialoglib:$Download'//$Download为上面的最新版本
+    implementation 'com.chy.chydialoglib:chydialoglib:$Download'//$Download为上面的最新版本，例如1.2.2
     ...
 }
 ```
