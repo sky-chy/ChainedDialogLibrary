@@ -23,8 +23,8 @@
         </text>
         <text textLength="550" transform="scale(.1)" x="335" y="140">LastVersion</text>
         <text fill="#010101" fill-opacity=".3" textLength="290" transform="scale(.1)" x="835"
-            y="150">1.2.2
+            y="150">https://bintray.com/chyhongye/chydialoglib/chydialoglib/_latestVersion
         </text>
-        <text textLength="290" transform="scale(.1)" x="835" y="140">1.2.2</text>
+        <text textLength="290" transform="scale(.1)" x="835" y="140">https://bintray.com/chyhongye/chydialoglib/chydialoglib/_latestVersion</text>
     </g>
 </svg>
