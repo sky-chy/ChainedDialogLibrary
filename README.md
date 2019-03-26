@@ -9,12 +9,12 @@
 ```gradle
 dependencies {
     ...
-    implementation 'com.chy.chydialoglib:chydialoglib:1.2.0'
+    implementation 'com.chy.chydialoglib:chydialoglib:1.2.1'
     ...
 }
 ```
 ### 方法二：下载jar包
-jar包下载地址：[ ![Download](https://api.bintray.com/packages/chyhongye/chydialoglib/chydialoglib/images/download.svg?version=1.2.0) ](https://bintray.com/chyhongye/chydialoglib/chydialoglib/1.2.0/link)
+jar包下载地址：[ ![Download](https://api.bintray.com/packages/chyhongye/chydialoglib/chydialoglib/images/download.svg) ](https://bintray.com/chyhongye/chydialoglib/chydialoglib/_latestVersion)
 ----------
 ### 所有对话框的通用方法
 
@@ -253,4 +253,27 @@ GridDialog.newInstance()
 ```java
 LoadingDialog.newInstance()
         .show(getSupportFragmentManager());
+```
+----------
+## 加载对话框
+### 预览图
+<img src="/preview/progress_dialog.gif" alt="加载对话框预览图" width="360" height="640">
+
+### 方法使用
+|方法|作用|参数/用法|默认值|  
+|:----|:------:|:-:|:-:|
+|setProgress(int progress)|设置进度||-|
+|setDelayMillis(int second)|设置进度条更新间隔|以秒为单位|500|
+|setTextSize(int textSize)|设置进度条文字大小|float型的sp值|10sp|
+|setTextColor(@ColorInt int textColor)|设置进度文字颜色|Color值|Color.WHITE|
+|setProgressDrawable(Drawable drawable)|设置进度前景|Drawable值|#417148|
+|setMax(int max)|设置最大进度值|最高支持千分位|100|
+
+### 简单用法
+```java
+final ProgressDialog dialog = ProgressDialog.newInstance()
+        .setDelayMillis(300)
+        .setMax(100);
+dialog.show(getSupportFragmentManager());
+dialog.setProgress(pro_num[0]);
 ```
