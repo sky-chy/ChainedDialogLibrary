@@ -14,7 +14,7 @@ dependencies {
 }
 ```
 ### 方法二：下载jar包
-jar包下载地址：[ ![Download](https://api.bintray.com/packages/chyhongye/chydialoglib/chydialoglib/images/download.svg) ](https://bintray.com/chyhongye/chydialoglib/chydialoglib/_latestVersion)
+jar包下载地址：[ ![Download](https://api.bintray.com/packages/chyhongye/chydialoglib/chydialoglib/images/download.svg?version=1.2.0) ](https://bintray.com/chyhongye/chydialoglib/chydialoglib/1.2.0/link)
 ----------
 ### 所有对话框的通用方法
 
