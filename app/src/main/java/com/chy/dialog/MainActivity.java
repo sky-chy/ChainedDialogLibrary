@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
                 Runnable r = new Runnable() {
                     @Override
                     public void run() {
-                        pro_num[0]=pro_num[0]+1;
+                        pro_num[0]=pro_num[0]+10;
                         dialog.setProgress(pro_num[0]);
                         if (pro_num[0] != 100)
                             handler.postDelayed(this, 500);
