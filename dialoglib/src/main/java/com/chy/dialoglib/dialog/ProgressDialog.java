@@ -17,7 +17,7 @@ public class ProgressDialog extends BaseDialog {
     private LinearLayout lay;
     private MyProgressBar pro;
     private int progress;
-    private int textSize = 10;
+    private float textSize = 10;
     private int textColor = Color.WHITE;
     private int second = 500;
     private int max = 100;
@@ -84,7 +84,7 @@ public class ProgressDialog extends BaseDialog {
      * @param textSize 字号
      * @return 对话框本体
      */
-    public ProgressDialog setTextSize(int textSize) {
+    public ProgressDialog setTextSize(float textSize) {
         this.textSize = textSize;
         return this;
 

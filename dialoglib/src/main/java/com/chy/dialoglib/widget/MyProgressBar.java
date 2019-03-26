@@ -22,7 +22,7 @@ public class MyProgressBar extends ProgressBar {
     // 进度文字位置信息
     private Rect mProgressTextRect = new Rect();
     //设置文字大小
-    private int textSize = 10;
+    private float textSize = 10;
     private int color = Color.WHITE;
 
     public MyProgressBar(Context context) {
@@ -92,7 +92,7 @@ public class MyProgressBar extends ProgressBar {
      *
      * @param textSize 字号
      */
-    public void setTextSize(int textSize) {
+    public void setTextSize(float textSize) {
         this.textSize = textSize;
     }
 
