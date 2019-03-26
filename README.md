@@ -2,6 +2,7 @@
 链式对话框库，支持自定义动画，本库共集成提示对话框(PromptDialog)，文本对话框(TextDialog)，item对话框(ItemDialog)，grid对话框(GridDialog)，加载对话框(LoadingDialog).高度自定义化，内置的样式不满意，可以自由修改，
 ----------
 
+最新版本：[ ![LastVersion](https://github.com/chyhongye/ChainedDialogLibrary/blob/master/preview/LastVersion.svg) ]()
 
 ## 使用方法
 ### 方法一：添加依赖
@@ -9,7 +10,7 @@
 ```gradle
 dependencies {
     ...
-    implementation 'com.chy.chydialoglib:chydialoglib:1.2.1'
+    implementation 'com.chy.chydialoglib:chydialoglib:$LastVersion'
     ...
 }
 ```

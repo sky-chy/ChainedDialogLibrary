@@ -19,9 +19,9 @@
     <g fill="#fff" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"
         text-anchor="middle">
         <text fill="#010101" fill-opacity=".3" textLength="550" transform="scale(.1)" x="335"
-            y="150">lastVersion
+            y="150">LastVersion
         </text>
-        <text textLength="550" transform="scale(.1)" x="335" y="140">lastVersion</text>
+        <text textLength="550" transform="scale(.1)" x="335" y="140">LastVersion</text>
         <text fill="#010101" fill-opacity=".3" textLength="290" transform="scale(.1)" x="835"
             y="150">1.2.1
         </text>
