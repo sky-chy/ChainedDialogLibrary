@@ -39,15 +39,17 @@ public class ViewDialog extends BaseDialog {
     }
 
     @Override
-    public void operationInterface(View linearLayout, BaseDialog baseDialog) {
-        lay = ((LinearLayout) linearLayout);
+    public void operationInterface(View view, BaseDialog baseDialog) {
+        lay = view.findViewById(R.id.lay);
         initView();
     }
 
     private void initView() {
-        if (lay.getChildCount() > 0)
-            lay.removeAllViews();
-        lay.addView(this.view);
+        lay.removeAllViews();
+        if (view != null)
+            lay.addView(view);
+        else
+            isEnabled = true;
         setBackgroundParams();
     }
 
