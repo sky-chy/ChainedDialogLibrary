@@ -63,13 +63,11 @@ public class LoadingDialog extends BaseDialog {
         if (loadingImageID != 0 && backgroundColor != 0) {
             lay.setBackgroundColor(backgroundColor);
             gif.setImageResource(loadingImageID);
-        }
-        if (loadingImageID != 0 && backgroundDrawable != null) {
+        } else if (loadingImageID != 0 && backgroundDrawable != null) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
                 lay.setBackground(backgroundDrawable);
             gif.setImageResource(loadingImageID);
-        }
-        if (loadingImageID != 0 && backgroundRes != 0) {
+        } else if (loadingImageID != 0 && backgroundRes != 0) {
             lay.setBackgroundResource(backgroundRes);
             gif.setImageResource(loadingImageID);
         }

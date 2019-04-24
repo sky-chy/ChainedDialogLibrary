@@ -152,15 +152,13 @@ public class ItemDialog extends BaseDialog {
     private void setMenuBackgroundParams() {
         if (menuBackgroundColor != 0) {
             menus.setBackgroundColor(menuBackgroundColor);
-        }
-        if (menuBackgroundDrawable != null) {
+        } else if (menuBackgroundDrawable != null) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
                 menus.setBackground(menuBackgroundDrawable);
             } else {
                 throw new RuntimeException("本机SDK版本低于16或Android版本低于4.2");
             }
-        }
-        if (menuBackgroundDrawableResource != 0) {
+        } else if (menuBackgroundDrawableResource != 0) {
             menus.setBackgroundResource(menuBackgroundDrawableResource);
         }
     }

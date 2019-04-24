@@ -160,15 +160,13 @@ public class TextDialog extends BaseDialog {
     private void setBackgroundParams() {
         if (backgroundColor != 0) {
             lay.setBackgroundColor(backgroundColor);
-        }
-        if (backgroundDrawable != null) {
+        } else if (backgroundDrawable != null) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
                 lay.setBackground(backgroundDrawable);
             } else {
                 throw new RuntimeException("本机SDK版本低于16或Android版本低于4.2");
             }
-        }
-        if (backgroundDrawableResource != 0) {
+        } else if (backgroundDrawableResource != 0) {
             lay.setBackgroundResource(backgroundDrawableResource);
         }
     }

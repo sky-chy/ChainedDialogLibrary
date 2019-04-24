@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.chy.dialoglib.base.BaseDialog;
@@ -16,6 +17,7 @@ import com.chy.dialoglib.dialog.LoadingDialog;
 import com.chy.dialoglib.dialog.ProgressDialog;
 import com.chy.dialoglib.dialog.PromptDialog;
 import com.chy.dialoglib.dialog.TextDialog;
+import com.chy.dialoglib.dialog.ViewDialog;
 import com.chy.dialoglib.dialog.griddialog.GridDialog;
 import com.chy.dialoglib.listener.OnDialogClickListener;
 import com.chy.dialoglib.listener.OnDialogGridClickListener;
@@ -149,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
                 Runnable r = new Runnable() {
                     @Override
                     public void run() {
-                        pro_num[0]=pro_num[0]+10;
+                        pro_num[0] = pro_num[0] + 10;
                         dialog.setProgress(pro_num[0]);
                         if (pro_num[0] != 100)
                             handler.postDelayed(this, 500);
@@ -159,7 +161,13 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
             case R.id.loading_dialog:
-                LoadingDialog.newInstance()
+                LoadingDialog.newInstance().show(getSupportFragmentManager());
+                break;
+            case R.id.view_dialog:
+                ImageView view1=new ImageView(this);
+                view1.setImageResource(R.mipmap.ic_launcher);
+                ViewDialog.newInstance()
+                        .addView(view1)
                         .show(getSupportFragmentManager());
                 break;
         }

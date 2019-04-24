@@ -3,6 +3,14 @@
 ----------
 
 # 最新版本：[![Download](https://api.bintray.com/packages/chyhongye/chydialoglib/chydialoglib/images/download.svg)](https://bintray.com/chyhongye/chydialoglib/chydialoglib/_latestVersion)
+# 版本更新
+----------
+V1.3.0
+增加纯视图对话框<br>
+优化其他对话框设置背景的逻辑
+----------
+...
+----------
 
 ## 使用方法
 ### 方法一：添加依赖
@@ -277,4 +285,26 @@ final ProgressDialog dialog = ProgressDialog.newInstance()
         .setMax(100);
 dialog.show(getSupportFragmentManager());
 dialog.setProgress(pro_num[0]);
+```
+----------
+## 纯视图对话框
+### 预览图
+<img src="/preview/view_dialog.gif" alt="纯视图对话框预览图" width="360" height="640">
+
+### 方法使用
+|方法|作用|参数/用法|默认值|  
+|:----|:------:|:-:|:-:|
+|addView(View view)|添加view控件||-|
+|enabledDefaultBackground(boolean isEnabled)|是否启用默认背景图片|true为启用，false为不启用|false|
+|setBackgroundColor(@ColorInt int color)|设置背景颜色|Color值|#eaeaea|
+|setBackground(Drawable drawable)|设置对话框背景|drawable型的背景图片|-|
+|setBackgroundRes(@DrawableRes int resource)|设置对话框背景图|Resource中的id值|-|
+
+### 简单用法
+```java
+ImageView view1=new ImageView(this);
+view1.setImageResource(R.mipmap.ic_launcher);
+final ViewDialog.newInstance()
+        .addView(view1)
+        .show(getSupportFragmentManager());
 ```
