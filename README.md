@@ -4,17 +4,6 @@
 
 # 最新版本：[![Download](https://api.bintray.com/packages/chyhongye/chydialoglib/chydialoglib/images/download.svg)](https://bintray.com/chyhongye/chydialoglib/chydialoglib/_latestVersion)
 ----------
-# 历史版本
-----------
-V 1.3.0<br>
-增加纯视图对话框<br>
-优化其他对话框设置背景的逻辑
-
-----------
-以前版本<br>
-...
-
-----------
 
 ## 使用方法
 ### 方法一：添加依赖
@@ -312,3 +301,17 @@ final ViewDialog.newInstance()
         .addView(view1)
         .show(getSupportFragmentManager());
 ```
+
+# 历史版本
+----------
+V 1.3.1<br>
+更改ViewDialog为CustomViewDialog
+<br><br>
+V 1.3.0<br>
+增加纯视图对话框<br>
+优化其他对话框设置背景的逻辑
+<br><br>
+以前版本<br>
+...
+
+----------

@@ -15,7 +15,7 @@ import com.chy.dialoglib.base.BaseDialog;
 /**
  * @author : chenhongye
  */
-public class ViewDialog extends BaseDialog {
+public class CustomViewDialog extends BaseDialog {
     private View view;
     private LinearLayout lay;
     //背景
@@ -26,9 +26,9 @@ public class ViewDialog extends BaseDialog {
     //是否启用默认的背景图片
     private boolean isEnabled = false;
 
-    public static ViewDialog newInstance() {
+    public static CustomViewDialog newInstance() {
         Bundle bundle = new Bundle();
-        ViewDialog dialog = new ViewDialog();
+        CustomViewDialog dialog = new CustomViewDialog();
         dialog.setArguments(bundle);
         return dialog;
     }
@@ -75,7 +75,7 @@ public class ViewDialog extends BaseDialog {
      * @param view 需要展示的视图
      * @return 当前类
      */
-    public ViewDialog addView(View view) {
+    public CustomViewDialog addView(View view) {
         this.view = view;
         return this;
     }
@@ -86,7 +86,7 @@ public class ViewDialog extends BaseDialog {
      * @param backgroundColor Color值
      * @return 对话框本体
      */
-    public ViewDialog setBackgroundColor(@ColorInt int backgroundColor) {
+    public CustomViewDialog setBackgroundColor(@ColorInt int backgroundColor) {
         this.backgroundColor = backgroundColor;
         return this;
     }
@@ -97,7 +97,7 @@ public class ViewDialog extends BaseDialog {
      * @param backgroundDrawable Drawable值
      * @return 对话框本体
      */
-    public ViewDialog setBackground(Drawable backgroundDrawable) {
+    public CustomViewDialog setBackground(Drawable backgroundDrawable) {
         this.backgroundDrawable = backgroundDrawable;
         return this;
     }
@@ -108,7 +108,7 @@ public class ViewDialog extends BaseDialog {
      * @param backgroundDrawableResource drawable ID值
      * @return 对话框本体
      */
-    public ViewDialog setBackgroundRes(@DrawableRes int backgroundDrawableResource) {
+    public CustomViewDialog setBackgroundRes(@DrawableRes int backgroundDrawableResource) {
         this.backgroundDrawableResource = backgroundDrawableResource;
         return this;
     }
@@ -119,7 +119,7 @@ public class ViewDialog extends BaseDialog {
      * @param isEnabled true 启用| false 不启用 | 默认false
      * @return 当前类
      */
-    public ViewDialog enabledDefaultBackground(boolean isEnabled) {
+    public CustomViewDialog enabledDefaultBackground(boolean isEnabled) {
         this.isEnabled = isEnabled;
         return this;
     }
